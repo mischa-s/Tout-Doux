@@ -100,15 +100,13 @@ essential part of this exercise and it's not trivial. Rename this file to `lesso
 _pending approval of documentation from an instructor_
 
 Implement the following endpoints:
-- `[GET]` list of users
-- `[GET]` list of articles for a user
-- `[GET]` list of comments for a article by a user
+- `[GET]` list of cats
+- `[GET]` a cat by id
 
-### Release 2: Implement POST requests
+### Release 2: Implement POST, PUT and DELETE requests
 _pending approval of documentation from an instructor_
 
 Implement the following endpoints:
-- `[POST]` create a new article by a user
-- `[POST]` create a new comment for an article by a user
-
-
+- `[POST]` create a cat 
+- `[PUT]` modify a cat by id 
+- `[DELETE]` delete a cat by id 
