@@ -82,6 +82,7 @@ that we plan for the future and properly namespace our documentation and work un
 ## Releases
 **Note about testing:** *Tests, especially while building an API are NOT optional or nice to have.
 In general, an untested app is not worth having ;) Today, we're going to try to TDD our way through this app. 
+We're going to use the testing library [supertest.](https://github.com/visionmedia/supertest)
 
 1. Decide which endpoint you want to write.
 2. Add a section in the README describing the behavior of that endpoint.
