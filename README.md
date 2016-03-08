@@ -1,4 +1,4 @@
-# Build An API for Meowtown
+# Build An API for Meowtown™
 
 ## Learning Competencies
 - Design and architect an API for the public with good documentation.
