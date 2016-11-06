@@ -35,21 +35,24 @@ We're going to use the testing library [supertest.](https://github.com/visionmed
 
 ### Release 0: Documentation
 Designing an API starts with documentation. Without proper and detailed documentation
-an API would not be dependable. What should you include? Let's follow [Twitter's REST API](https://dev.twitter.com/docs/api/1.1) model.
+an API would not be dependable. What should you include? Do some research, start [with this blog](https://bradfults.com/the-best-api-documentation-b9e46400379a#.3iqp2e22v) it links to an example of pretty well documented api [here](https://context.io/docs/lite/users/email_accounts/folders/messages/flags)
+
 We will not implement or write a single piece of code until we get our documentation right, this is an
 essential part of this exercise and it's not trivial. Create a lesson.md file to document your endpoints.
+
+Check out [common-readme](https://github.com/noffle/common-readme) for a really great starting point for a readme.
 
 ### Release 1: Implement GET requests
 _pending approval of documentation from an instructor_
 
-Implement the following endpoints:
+Implement the following endpoints using TDD:
 - `[GET]` list of cats
 - `[GET]` a cat by id
 
 ### Release 2: Implement POST, PUT and DELETE requests
 _pending approval of documentation from an instructor_
 
-Implement the following endpoints:
+Implement the following endpoints using TDD:
 - `[POST]` create a cat 
 - `[PUT]` modify a cat by id 
 - `[DELETE]` delete a cat by id 
