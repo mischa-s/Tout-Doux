@@ -53,7 +53,8 @@ test('API | Cats | It responds by adding a new cat', (t) => {
     .post('/api/v1/cats/')
     .send(tibbles)
     .then((res) => {
-      return testKnex("cats").where({name: tibbles.name})
+      return testKnex("cats")
+      .where({name: tibbles.name})
       })
     .then(rows => {
       t.is(rows[0].name, tibbles.name)
@@ -62,7 +63,7 @@ test('API | Cats | It responds by adding a new cat', (t) => {
 })
 
 // PUT
-test.only('API | Cats | It responds by editing the cat', (t) => {
+test('API | Cats | It responds by editing the cat', (t) => {
   t.plan(2)
 
   const fluffyEdited = {
@@ -97,3 +98,14 @@ test.only('API | Cats | It responds by editing the cat', (t) => {
 
 
 // DELETE
+
+test('API | Cats | It responds by deleting the selected cat', (t) => {
+  t.plan()
+
+  return testKnex('cats')
+    .where({name: "fluffy"})
+    .then(rows => {
+      t.is(rows.length === 0)
+    })
+    //UNFINISHED
+})
