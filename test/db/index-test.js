@@ -62,5 +62,3 @@ test('add | inserts a cat into the database', (t) => {
      // t.is(rows[0].age, tibbles.age)
     })
 })
-
-
