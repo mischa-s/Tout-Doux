@@ -26,7 +26,7 @@ test.afterEach.always(() => {
 
 
 // GET ALL
-test('API | Cats | It responds with a list of cats', (t) => {
+test.skip('API | Cats | It responds with a list of cats', (t) => {
   t.plan(2)
 
   return request(makeApp())

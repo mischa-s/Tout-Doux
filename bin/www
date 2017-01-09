@@ -4,9 +4,9 @@
  * Module dependencies.
  */
 
-const knex = require('../db/knex')
-const db = require('../db')(knex)
-const app = require('../app')(db)
+const knex = require('../db/knex') // knex instance
+const db = require('../db')(knex) // db methods
+const app = require('../app')(db) // app
 const debug = require('debug')('server')
 const http = require('http')
 
