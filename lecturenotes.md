@@ -1,10 +1,9 @@
-# Notez
+# Notes
 
 - res.json
-- superagent
-- routes vs one file
-- api versioning
-- postman 
-- fs to store data 
+- separation of concerns
+- superagent, supertest-as-promised
+- ava
+- 
 - happy path vs unhappy path
 
