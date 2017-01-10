@@ -61,6 +61,7 @@ test('add | inserts a cat into the database', (t) => {
     })
 })
 
+
 //TEST 3 - check that a cat record can be deleted from the cats table
 
 test('delete | deletes a cat from the database', (t) => {
