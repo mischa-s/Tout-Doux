@@ -35,7 +35,7 @@ test('find | responds with a list of cats', (t) => {
 })
 
 //TEST 2 - checks that the method will insert a new cat into the cats table
-test('add | inserts a cat into the database', (t) => {
+test.only('add | inserts a cat into the database', (t) => {
   t.plan(2)
 
   // arrange
@@ -47,17 +47,10 @@ test('add | inserts a cat into the database', (t) => {
 
   // action
   return db.add('cats', tibbles)
-    .then(() => {
-      return testKnex('cats')
-        .where('name', tibbles.name)
-        .select()
-    })
-    .then((rows) => { // [{}, {}]
-
+    .then((cats) => {
       // assert
-      t.is(rows.length === 1)
-      t.is(rows[0].name, tibbles.name)
-     // t.is(rows[0].age, tibbles.age)
+      t.is(cats.length, 3)
+      t.is(cats[2].name, tibbles.name)
     })
 })
 

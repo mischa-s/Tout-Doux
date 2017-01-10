@@ -3,43 +3,10 @@
   <head>
     <title>new cat</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-
-    <script id="addCatTemplate" type="text/x-handlebars-template">
-
-      <h1> Meow Town</h1>
-      <form id="newCat" action="/api/v1/cats" method="post">
-        <p>
-          <input placeholder="Cat Name" type="text" name="catName" id="catName"/><br><br>
-          <input placeholder="Age" type="number" name="catAge" id="catAge"/><br><br>
-          <input placeholder="Cat Image url" type="text" name="catImage" id="catImage"/>
-        </p>
-        <input type="submit" name = "submit" value = "submit" id = "submit"/>
-      </form>
-
-
-    </script>
-
-    <script id="catListTemplate" type="text/x-handlebars-template">
-      <table>
-        <tr> <th>Cat Name</th><th>Age</th><th> </th> </tr>
-        <tr> <th>{{this.name}}</th><th>{{this.age}}</th><th><button type="button" id="edit">Edit</button></th> </tr>
-
-      </table>
-    </script>
-
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-    <script src="client.js"></script>
+    <script src="bundle.js"></script>
   </head>
-
   <body>
-    <h1>Welcome to Meow Town</h1>
-
-
-    <div class="container">
-
+    <div id="app" ></div>
    </div>
-
   </body>
-
 </html>
