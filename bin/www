@@ -1,12 +1,10 @@
 #!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
+// main
 const knex = require('../db/knex') // knex instance
 const db = require('../db')(knex) // db methods
 const app = require('../app')(db) // app
+
+
 const debug = require('debug')('server')
 const http = require('http')
 
