@@ -1,3 +1,16 @@
+
+console.log('it works!!')
+
+var source   = $("#addCatTemplate").html();
+var addCatTemplate = Handlebars.compile(source);
+var source   = $("#catListTemplate").html();
+var catListTemplate = Handlebars.compile(source);
+
+document.addEventListener('DOMContentLoaded', function(e){
+  $.get('api/v1/cats')
+  .done(response => {
+    $('.container').append(catListTemplate(response))
+
 const data = [
   {name: 'Goofballs',
    age:2
@@ -9,17 +22,6 @@ const data = [
    age:9
   }
 ]
-
-// var source   = $("#names-template").html();
-//
-// var template = Handlebars.compile(source);
-
-document.addEventListener('DOMContentLoaded', function(e) {
-  $.get('api/v1/cats/')
-  .done(function(response){
-    // $('.resources').append(template(response))
-  })
-
 
   $('#submit').on("click", event => {
     event.preventDefault()
