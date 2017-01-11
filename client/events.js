@@ -26,23 +26,3 @@ module.exports = function (store) {
 
 
 }
-
-
-
-//  $.get('api/v1/cats')
-//  .done(response => {
-//    $('.container').append(catListTemplate(response))
-//
-//
-//  $('#submit').on("click", event => {
-//    event.preventDefault()
-//    const input = $('#form').serializeArray()
-//    $.post('/api/v1/cats', input, function(res){
-//      // $('.resources').append(template(response))
-//    })
-//  })
-//
-//  $('ul').on('click', '.cats', function (e) {
-//      console.log(e.target)
-//  })
-//})

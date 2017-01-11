@@ -1,7 +1,7 @@
-const cats = require('./cats')
+const myRoute = require('./a-resource')
 
 module.exports = {
-  cats
+  myRoute
 }
 
 
