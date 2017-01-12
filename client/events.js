@@ -21,7 +21,7 @@ module.exports = function (store) {
     }
     switch (e.target.name) {
       case "complete":
-      console.log(e.target.value)
+      console.log(e.target.id, e.target.value)
     }
 
   })
