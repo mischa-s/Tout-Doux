@@ -8,7 +8,7 @@ module.exports = function (tasks) {
           tasks.map((task) => {
             return (
                     `<tr>
-                      <td>${task.task}</td>
+                      <td><input type="radio" name="complete" value=${task.id}><del> ${task.task}</td>
                     </tr>`)
           })
 
