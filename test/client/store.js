@@ -4,7 +4,7 @@ const Store = require('../../client/store')
 test('calling update() notifies anylisteners with an updated model', (t) => {
   // arrange
   t.plan(1)
-  const model = {cats: [], location: '' }
+  const model = {appName: 'Hello' }
   const store = Store(model)
   
   store.subscribe((updatedModel) => {
@@ -13,5 +13,5 @@ test('calling update() notifies anylisteners with an updated model', (t) => {
   })
 
   // action
-  store.update('cats', ['snowball'])
+  store.update('appName', 'snowball')
 })

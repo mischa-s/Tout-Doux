@@ -21,9 +21,9 @@ test.afterEach.always(() => {
 })
 
 //TEST 1 - gets all the cats table data, then checks each row has an idea (truthy) and then checks the name in the row matches the index of the seed data.
-test('find | responds with a list of cats', (t) => {
-  //t.plan(4)
-
- // return db promise method here
-  
-})
+//test('find | responds with a list of cats', (t) => {
+//  //t.plan(4)
+//
+// // return db promise method here
+//  
+//})
