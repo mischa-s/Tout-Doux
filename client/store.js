@@ -1,19 +1,25 @@
 const request = require('superagent')
 require('superagent-as-promised')(request)
 
+
+//Uppercase Store
 module.exports = function (model) {
   const listeners = []
 
-  return {
+  var store = {
     subscribe: function (listener) {
       listeners.push(listener)
+    },
+
+    changeGreeting: function () {
+      this.update("appName", "Why Helloooo")
     },
 
     fetchResource: function () {
       //request
       //  .get('/api/v1/resources')
       //  .then((res) =>  {
-      //    // this.update('myString',  
+      //    // this.update('myString',
 
       //  })
     },
@@ -31,4 +37,6 @@ module.exports = function (model) {
       })
     }
   }
+
+  return store
 }
