@@ -1,7 +1,5 @@
-const myRoute = require('./a-resource')
+const myRoute = require('./tasks')
 
 module.exports = {
-  myRoute
+  tasks
 }
-
-

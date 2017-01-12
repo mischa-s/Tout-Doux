@@ -15,14 +15,14 @@ module.exports = function (model) {
       this.update("appName", "Why Helloooo")
     },
 
-    fetchResource: function () {
-      //request
-      //  .get('/api/v1/resources')
-      //  .then((res) =>  {
-      //    // this.update('myString',
-
-      //  })
-    },
+    // fetchResource: function () {
+    //   request
+    //    .get('/api/v1/tasks')
+    //    .then((res) =>  {
+    //      // this.update('myString',
+    //
+    //    })
+    // },
 
     update: function (key, update) {
       model[key] = update
