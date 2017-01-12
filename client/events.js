@@ -1,9 +1,10 @@
 module.exports = function (store) {
 
   // when a click on #submit is recieved
+
+
+
   // call a method on store
-
-
   document.addEventListener('click', (e) => {
     e.preventDefault()
     console.log('clicked', e.target)
