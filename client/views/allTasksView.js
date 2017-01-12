@@ -8,8 +8,7 @@ module.exports = function (tasks) {
           tasks.map((task) => {
             return (
                     `<tr>
-                      <td>${task.task}</td>
-                    </tr>`)
+                      <td> <input type="checkbox" name="complete" id=${task.id} value=${task.complete} checked><del> ${task.task}</td></tr>`)
           })
 
 

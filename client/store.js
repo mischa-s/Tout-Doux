@@ -24,6 +24,13 @@ module.exports = function (model) {
        })
     },
 
+    isComplete: function (id, complete) {
+        
+
+
+        fetchTasks()
+    },
+
     update: function (key, update) {
       model[key] = update
       console.log('model after update:', model.task)

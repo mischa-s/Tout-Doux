@@ -19,7 +19,10 @@ module.exports = function (store) {
       store.changeGreeting()
       break
     }
-
+    switch (e.target.name) {
+      case "complete":
+      console.log(e.target.id, e.target.value)
+    }
 
   })
 
