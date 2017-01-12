@@ -8,6 +8,7 @@ module.exports = function (db) {
   route.post('/', post)
 
   function get (req, res, next) {
+    // db.get()
   }
   
   function post (req, res, next) {
