@@ -15,18 +15,18 @@ module.exports = function (model) {
       this.update("appName", "Why Helloooo")
     },
 
-    // fetchResource: function () {
-    //   request
-    //    .get('/api/v1/tasks')
-    //    .then((res) =>  {
-    //      // this.update('myString',
-    //
-    //    })
-    // },
+    fetchTasks: function () {
+      request
+       .get('/api/v1/tasks')
+       .then((res) =>  {
+        //  this.update('myString',
+         this.update("tasks", res.body.ToutDoux);
+       })
+    },
 
     update: function (key, update) {
       model[key] = update
-      console.log('model after update:', model)
+      console.log('model after update:', model.task)
 
       this.notify(model)
     },
