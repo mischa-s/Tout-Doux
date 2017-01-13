@@ -35,11 +35,12 @@ module.exports = function (model) {
        })
     },
 
-    toggleComplete: function (id, complete) {
+    toggleComplete: function (id) {
       request
       .post(`/api/v1/tasks/${id}`)
+      .send(id)
       .then((res) => {
-        console.log(res.body);
+        console.log("Res Body", res.body);
       })
 
 
