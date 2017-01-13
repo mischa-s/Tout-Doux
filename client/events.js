@@ -9,7 +9,7 @@ module.exports = function (store) {
   // call a method on store
   document.addEventListener('click', (e) => {
     e.preventDefault()
-    console.log('clicked', e.target)
+    // console.log('clicked', e.target)
 
     switch (e.target.id) {
 
@@ -19,13 +19,22 @@ module.exports = function (store) {
         const task = getFormData(form)
         console.log("newtask", task)
         store.addTask(task)
-        store.fetchTasks() //WHY DO YOU NEED THIS
         break
     }
+
     switch (e.target.name) {
+
       case "complete":
       console.log(e.target.id, e.target.value)
+      break
+
+      case "delete":
+      // console.log(e.target.id)
+      store.deleteTask(e.target.id)
+      break
+
     }
+
 
   })
 

@@ -30,9 +30,16 @@ module.exports = function (model) {
        })
     },
 
-    isComplete: function (id, complete) {
-        
+    deleteTask: function(taskId){
+      request
+        .del(`/api/v1/tasks/${taskId}`)
+        .then((res) =>  {
+          this.update("tasks", res.body.ToutDoux);
+        })
 
+    },
+
+    isComplete: function (id, complete) {
 
         fetchTasks()
     },
