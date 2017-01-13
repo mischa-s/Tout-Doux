@@ -11,6 +11,9 @@ module.exports = function (knex) {
 
     insert: function (table, item) {
       return knex(table).insert(item)
-    }
+    },
+    // edit: function (table, id) {
+    //   return knex(table).select(id).then(())
+    // }
   }
 }

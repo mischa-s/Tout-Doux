@@ -6,6 +6,7 @@ module.exports = function (db) {
   // GET api/v1/tasks/
   route.get('/', get)
   route.post('/', post)
+  // route.post('/:id', put)
 
   function get (req, res, next) {
     db.find("ToutDoux", {})
@@ -23,6 +24,11 @@ module.exports = function (db) {
       })
       .catch(next)
   }
+
+  // function put (req, res, next) {
+  //   db.edit()
+  //   console.log(req.params.id);
+  // }
 
   return route
 }
