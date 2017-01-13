@@ -12,20 +12,25 @@ module.exports = function (model) {
     },
 
     addTask: function (task) {
-      console.log("task in addTask", task);
-      request
-       .post('/api/v1/tasks')
-       .send(task)
-       .then((res) =>  {
-        //  console.log("res.body",res);
-         this.update("tasks", res.body.ToutDoux);
-       })
+   console.log("task in addTask", task);
+   request
+    .post('/api/v1/tasks')
+    .send(task)
+    .then((res) =>  {
+     //  console.log("res.body",res);
+      this.update("tasks", res.body.ToutDoux);
+    })
+   },
+
+    changeGreeting: function () {
+      this.update("appName", "Why Helloooo")
     },
 
     fetchTasks: function () {
       request
        .get('/api/v1/tasks')
        .then((res) =>  {
+        //  this.update('myString',
          this.update("tasks", res.body.ToutDoux);
        })
     },
@@ -36,12 +41,18 @@ module.exports = function (model) {
         .then((res) =>  {
           this.update("tasks", res.body.ToutDoux);
         })
-
+    toggleComplete: function (id) {
+      request
+      .post(`/api/v1/tasks/${id}`)
+      .send(id)
+      .then((res) => {
+        console.log("Res Body", res.body);
+      })
     },
 
     isComplete: function (id, complete) {
 
-        fetchTasks()
+        // fetchTasks()
     },
 
     update: function (key, update) {

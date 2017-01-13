@@ -7,6 +7,7 @@ module.exports = function (db) {
   route.get('/', get)
   route.post('/', post)
   route.delete('/:id', del)
+  route.post('/:id', put)
 
   function get (req, res, next) {
     db.find("ToutDoux", {})
@@ -34,6 +35,8 @@ module.exports = function (db) {
       .catch(next)
   }
 
-
+  function put (req, res, next) {
+    db.edit("ToutDoux", req.params.id)
+  }
   return route
 }

@@ -23,6 +23,16 @@ module.exports = function (knex) {
         .then(() => {
           return knex(table).select()
         })
+    },
+    edit: function (table, id) {
+      return knex(table).select(id)
+      .where ({id:id})
+      .update ({
+        complete: true
+      })
+      .then (()=> {
+        return knex(table).select()
+      })
     }
   }
 }

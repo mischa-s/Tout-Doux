@@ -17,7 +17,6 @@ module.exports = function (store) {
         // console.log('you clicked addTask')
         const form = document.querySelector("#add")
         const task = getFormData(form)
-        console.log("newtask", task)
         store.addTask(task)
         break
     }
@@ -25,17 +24,17 @@ module.exports = function (store) {
     switch (e.target.name) {
 
       case "complete":
-      console.log(e.target.id, e.target.value)
+     console.log(e.target.id, e.target.value)
       break
 
       case "delete":
-      // console.log(e.target.id)
       store.deleteTask(e.target.id)
       break
 
     }
-
-
+      store.toggleComplete(e.target.id)
+      store.fetchTasks()
+   }
   })
 
 
