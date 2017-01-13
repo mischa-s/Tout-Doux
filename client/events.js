@@ -18,15 +18,23 @@ module.exports = function (store) {
         const form = document.querySelector("#add")
         const task = getFormData(form)
         store.addTask(task)
-        store.fetchTasks() //WHY DO YOU NEED THIS
         break
     }
+
     switch (e.target.name) {
+
       case "complete":
+     console.log(e.target.id, e.target.value)
+      break
+
+      case "delete":
+      store.deleteTask(e.target.id)
+      break
+
+    }
       store.toggleComplete(e.target.id)
       store.fetchTasks()
    }
-
   })
 
 

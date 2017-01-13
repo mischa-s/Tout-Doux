@@ -6,6 +6,7 @@ module.exports = function (db) {
   // GET api/v1/tasks/
   route.get('/', get)
   route.post('/', post)
+  route.delete('/:id', del)
   route.post('/:id', put)
 
   function get (req, res, next) {
@@ -17,8 +18,17 @@ module.exports = function (db) {
   }
 
   function post (req, res, next) {
-    console.log("req.body in routes", req.body);
     db.insert("ToutDoux", req.body)
+      .then((ToutDoux) => {
+        res.json({ToutDoux})
+      })
+      .catch(next)
+  }
+
+  function del (req, res, next) {
+    console.log(req.params);
+
+    db.deleteById("ToutDoux", req.params.id)
       .then((ToutDoux) => {
         res.json({ToutDoux})
       })
@@ -28,6 +38,5 @@ module.exports = function (db) {
   function put (req, res, next) {
     db.edit("ToutDoux", req.params.id)
   }
-
   return route
 }

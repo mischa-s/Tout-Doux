@@ -35,6 +35,12 @@ module.exports = function (model) {
        })
     },
 
+    deleteTask: function(taskId){
+      request
+        .del(`/api/v1/tasks/${taskId}`)
+        .then((res) =>  {
+          this.update("tasks", res.body.ToutDoux);
+        })
     toggleComplete: function (id) {
       request
       .post(`/api/v1/tasks/${id}`)
@@ -42,7 +48,9 @@ module.exports = function (model) {
       .then((res) => {
         console.log("Res Body", res.body);
       })
+    },
 
+    isComplete: function (id, complete) {
 
         // fetchTasks()
     },
