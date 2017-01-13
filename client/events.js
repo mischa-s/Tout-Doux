@@ -34,10 +34,5 @@ module.exports = function (store) {
     }
       store.toggleComplete(e.target.id)
       store.fetchTasks()
-   }
-  })
-
-
-
-
-}
+   })
+  }

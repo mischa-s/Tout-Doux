@@ -41,6 +41,8 @@ module.exports = function (model) {
         .then((res) =>  {
           this.update("tasks", res.body.ToutDoux);
         })
+    },
+
     toggleComplete: function (id) {
       request
       .post(`/api/v1/tasks/${id}`)
@@ -70,4 +72,5 @@ module.exports = function (model) {
   }
 
   return store
+
 }
