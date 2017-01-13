@@ -5,10 +5,9 @@ module.exports = function (db) {
 
   // GET api/v1/tasks/
   route.get('/', get)
-  // route.post('/', post)
+  route.post('/', post)
 
   function get (req, res, next) {
-    console.log(req.url)
     db.find("ToutDoux", {})
       .then((ToutDoux) => {
         res.json({ToutDoux})
@@ -16,8 +15,14 @@ module.exports = function (db) {
       .catch(next)
   }
 
-  // function post (req, res, next) {
-  // }
+  function post (req, res, next) {
+    console.log("req.body in routes", req.body);
+    db.insert("ToutDoux", req.body)
+      .then((ToutDoux) => {
+        res.json({ToutDoux})
+      })
+      .catch(next)
+  }
 
   return route
 }

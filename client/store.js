@@ -11,15 +11,21 @@ module.exports = function (model) {
       listeners.push(listener)
     },
 
-    changeGreeting: function () {
-      this.update("appName", "Why Helloooo")
+    addTask: function (task) {
+      console.log("task in addTask", task);
+      request
+       .post('/api/v1/tasks')
+       .send(task)
+       .then((res) =>  {
+        //  console.log("res.body",res);
+         this.update("tasks", res.body.ToutDoux);
+       })
     },
 
     fetchTasks: function () {
       request
        .get('/api/v1/tasks')
        .then((res) =>  {
-        //  this.update('myString',
          this.update("tasks", res.body.ToutDoux);
        })
     },

@@ -1,3 +1,5 @@
+const getFormData = require("get-form-data")
+
 module.exports = function (store) {
 
   // when a click on #submit is recieved
@@ -10,14 +12,15 @@ module.exports = function (store) {
     console.log('clicked', e.target)
 
     switch (e.target.id) {
-      case 'submit':
-        console.log('you clicked submit')
-         // fire a stor method here
-        // telling the store to update
+
+      case 'addTask':
+        // console.log('you clicked addTask')
+        const form = document.querySelector("#add")
+        const task = getFormData(form)
+        console.log("newtask", task)
+        store.addTask(task)
+        store.fetchTasks() //WHY DO YOU NEED THIS
         break
-      case "greeting":
-      store.changeGreeting()
-      break
     }
 
 
