@@ -5,7 +5,7 @@ const events = require('./events')
 const Store = require('./store')
 const view = require('./views')
 
-const model = {appName: 'Hello', tasks:[]}
+const model = {appName: 'ToutDoux List', tasks:[]}
 const store = Store(model)
 
 document.addEventListener('DOMContentLoaded', (e) => {
